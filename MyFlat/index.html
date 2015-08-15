@@ -13,13 +13,14 @@
         .emptyHeight200px {
             height: 200px;
         }
-        ul#myscrollspy {
-            top: 50px;
+        nav#myScrollspy {
+            top: 100px;
             position: fixed;
+            left:14px;
         }
     </style>
 </head>
-<body data-spy ="scroll" data-target="#myScrollspy">
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
     <nav>
         <div class="navbar navbar-default">
             <div class="container">
@@ -40,10 +41,13 @@
     </nav>
     <div class="container">
         <div class="col-md-1">
-            <ul class="nav nav-pills nav-stacked" role="tablist" id="myscrollspy">
-                <li class="active"><a href="#home">Home</a></li>
-                <li><a href="#Map">Map</a></li>
-            </ul>
+            <nav id="myScrollspy">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#Map">Map</a></li>
+                    <li><a href="#emptySpace">Empty space</a></li>
+                </ul>
+            </nav>  
         </div>
         <div class="col-md-11">
             <!--Writing modal for the carousel here-->
@@ -174,9 +178,9 @@
             <div class="row">
                 <div class="emptyHeight200px"></div>
             </div>
-            <div class="row" id="Map">
+            <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" id="Map">
                         <div class="panel-heading">Map Directions</div>
                         <div class="panel-body">
                             <div id="map-canvas">
@@ -185,6 +189,12 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <div class="emptyHeight200px"></div>
+            </div>
+            <div class="row">
+                <div class="emptyHeight200px" id="emptySpace"></div>
             </div>
         </div>
     </div>
